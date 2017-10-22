@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.foobee.profile"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <application
+    android:name=".MainApplication"
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true">
+    <activity android:name=".MainActivity"
+              android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+              android:theme="@style/Theme.Exponent.Light"
+              android:windowSoftInputMode="adjustResize">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+
+      <intent-filter>
+        <data android:scheme="expbc9cbf8ff9a9467bb89038f30eab169f"/>
+
+        <action android:name="android.intent.action.VIEW"/>
+
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+      </intent-filter>
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    </activity>
+
+    <!-- The Facebook SDK runs FacebookInitProvider on startup and crashes if there isn't an ID here -->
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="fb0"/>
+  </application>
+
+</manifest>
